@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Analytics } from "@vercel/analytics/react";
 import {
   ArrowRight,
   Certificate,
@@ -356,6 +357,7 @@ function App() {
         <span>Friday, 15 May 2026</span>
         <span>LINCHPIN SOFT SOLUTIONS PVT LIMITED</span>
       </footer>
+      <Analytics />
     </main>
   );
 }
