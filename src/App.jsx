@@ -17,6 +17,9 @@ gsap.registerPlugin(ScrollTrigger);
 
 const registrationUrl =
   "https://docs.google.com/forms/d/e/1FAIpQLSf9e4TqlipEe-Wlx1zkbG07NQgT2-7zGbgROvsErtUpDw9LHw/viewform?usp=sharing&ouid=115310974953644033874";
+const mapsUrl = "https://maps.app.goo.gl/ufEYLRXZn9L4NhPp8";
+const mapsEmbedUrl =
+  "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.3745248667524!2d78.45853489999999!3d17.441779399999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb913311bfd3f1%3A0xd2a8866290e57f77!2sLINCHPIN%20SOFT%20SOLUTIONS%20PRIVATE%20LIMITED!5e0!3m2!1sen!2sin!4v1778665181522!5m2!1sen!2sin";
 
 const stats = [
   { label: "registrations", value: "50", note: "limited seats" },
@@ -140,6 +143,7 @@ function App() {
         <div className="nav-links">
           <a href="#schedule">Schedule</a>
           <a href="#rewards">Rewards</a>
+          <a href="#location">Location</a>
           <a href="#register">Register</a>
         </div>
       </nav>
@@ -169,7 +173,7 @@ function App() {
             </span>
             <span>
               <MapPin size={18} weight="bold" />
-              alt.f, Begumpet
+              Linchpin Soft Solutions
             </span>
           </div>
         </div>
@@ -301,6 +305,29 @@ function App() {
         </div>
       </section>
 
+      <section className="section location-section" id="location">
+        <div className="location-copy">
+          <p className="eyebrow">Venue</p>
+          <h2>LINCHPIN SOFT SOLUTIONS PVT LIMITED.</h2>
+          <p>
+            The event is now hosted at Linchpin Soft Solutions. Use the map below for directions and plan to reach before the 9:00 AM reporting window.
+          </p>
+          <a className="secondary-cta map-link" href={mapsUrl} target="_blank" rel="noreferrer">
+            Open in Google Maps
+            <MapPin size={18} weight="bold" />
+          </a>
+        </div>
+        <div className="map-frame" aria-label="Map to Linchpin Soft Solutions">
+          <iframe
+            title="Linchpin Soft Solutions location"
+            src={mapsEmbedUrl}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
+        </div>
+      </section>
+
       <section className="register-section" id="register">
         <div className="register-panel">
           <div>
@@ -327,7 +354,7 @@ function App() {
       <footer className="footer">
         <span>Editathon 2026</span>
         <span>Friday, 15 May 2026</span>
-        <span>alt.f Coworking Space, Begumpet</span>
+        <span>LINCHPIN SOFT SOLUTIONS PVT LIMITED</span>
       </footer>
     </main>
   );
