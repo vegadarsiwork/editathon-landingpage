@@ -17,7 +17,8 @@ import {
 gsap.registerPlugin(ScrollTrigger);
 
 const registrationUrl =
-  "https://docs.google.com/forms/d/e/1FAIpQLSf9e4TqlipEe-Wlx1zkbG07NQgT2-7zGbgROvsErtUpDw9LHw/viewform?usp=sharing&ouid=115310974953644033874";
+  "https://docs.google.com/forms/d/e/1FAIpQLSf9e4TqlipEe-Wlx1zkbG07NQgT2-7zGbgROvsErtUpDw9LHw/viewform?usp=sf_link";
+const registrationPath = "/register";
 const mapsUrl = "https://maps.app.goo.gl/ufEYLRXZn9L4NhPp8";
 const mapsEmbedUrl =
   "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.3745248667524!2d78.45853489999999!3d17.441779399999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb913311bfd3f1%3A0xd2a8866290e57f77!2sLINCHPIN%20SOFT%20SOLUTIONS%20PRIVATE%20LIMITED!5e0!3m2!1sen!2sin!4v1778665181522!5m2!1sen!2sin";
@@ -70,6 +71,11 @@ function App() {
   const rootRef = useRef(null);
 
   useEffect(() => {
+    if (window.location.pathname === registrationPath) {
+      window.location.replace(registrationUrl);
+      return undefined;
+    }
+
     const ctx = gsap.context(() => {
       gsap.from("[data-reveal]", {
         opacity: 0,
@@ -161,7 +167,7 @@ function App() {
             A one-day video editing hackathon for Hyderabad editors who can turn raw footage into sharp stories under pressure.
           </p>
           <div className="hero-actions" data-reveal>
-            <a className="primary-cta" href={registrationUrl} target="_blank" rel="noreferrer">
+            <a className="primary-cta" href={registrationPath}>
               Register for ₹299
               <ArrowRight size={19} weight="bold" />
             </a>
@@ -339,7 +345,7 @@ function App() {
             </p>
           </div>
           <div className="register-actions">
-            <a className="primary-cta" href={registrationUrl} target="_blank" rel="noreferrer">
+            <a className="primary-cta" href={registrationPath}>
               Register on Google Forms
               <ArrowRight size={18} weight="bold" />
             </a>
