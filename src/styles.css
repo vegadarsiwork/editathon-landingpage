@@ -811,10 +811,20 @@ h1 span {
   .nav-shell {
     top: 12px;
     width: calc(100% - 20px);
+    padding: 9px 12px;
   }
 
   .nav-links {
     display: none;
+  }
+
+  .brand-lockup {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .brand-lockup img {
+    width: 104px;
   }
 
   .hero,
@@ -828,34 +838,89 @@ h1 span {
 
   .hero {
     width: min(100% - 28px, 560px);
+    gap: 32px;
     padding-top: 112px;
+    padding-bottom: 44px;
   }
 
   h1 {
-    font-size: clamp(4rem, 19vw, 6rem);
+    font-size: clamp(3.45rem, 18vw, 5.45rem);
+    line-height: 0.88;
   }
 
   .hero-art {
-    min-height: 560px;
+    min-height: 0;
+    padding: 6px 0 20px;
   }
 
   .edit-console {
-    right: 0;
-    left: 50%;
-    width: min(330px, 82vw);
-    transform: translateX(-50%) rotate(1deg);
+    position: relative;
+    top: auto;
+    right: auto;
+    left: auto;
+    width: 100%;
+    max-width: 430px;
+    margin: 0 auto;
+    padding: 14px;
+    transform: rotate(0.6deg);
+  }
+
+  .console-topline img {
+    width: 96px;
+  }
+
+  .console-topline span,
+  .console-footer span {
+    font-size: 0.58rem;
+    letter-spacing: 0.1em;
+  }
+
+  .preview-screen {
+    min-height: 210px;
+    margin: 14px 0;
+  }
+
+  .screen-title span {
+    max-width: 220px;
+    font-size: clamp(2.05rem, 10vw, 2.9rem);
+  }
+
+  .timeline-board {
+    height: 58px;
+    gap: 6px;
   }
 
   .hero-mark {
-    top: 43%;
-    left: -4px;
-    width: 178px;
+    top: auto;
+    bottom: 16px;
+    left: 4px;
+    width: 122px;
+    opacity: 0.74;
+  }
+
+  .hero-mark svg {
+    width: 58px;
+    height: 58px;
+  }
+
+  .hero-mark span {
+    bottom: 24px;
+    font-size: 0.72rem;
   }
 
   .prize-burst {
-    right: 0;
-    bottom: 5%;
-    width: 156px;
+    right: 2px;
+    bottom: 12px;
+    width: 124px;
+    padding: 18px;
+  }
+
+  .prize-burst span {
+    font-size: 0.58rem;
+  }
+
+  .prize-burst strong {
+    font-size: 1.18rem;
   }
 
   .stat-strip {
@@ -897,7 +962,7 @@ h1 span {
   }
 
   .location-section {
-    padding-top: 40px;
+    padding-top: 28px;
   }
 
   .map-frame,
@@ -907,6 +972,38 @@ h1 span {
 }
 
 @media (max-width: 520px) {
+  .nav-shell {
+    width: calc(100% - 24px);
+    border-radius: 28px;
+  }
+
+  .brand-lockup {
+    gap: 9px;
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+  }
+
+  .brand-lockup img {
+    width: 98px;
+  }
+
+  .eyebrow {
+    margin-bottom: 14px;
+    font-size: 0.66rem;
+    letter-spacing: 0.18em;
+  }
+
+  .hero {
+    width: calc(100% - 28px);
+    padding-top: 104px;
+  }
+
+  .hero-lede {
+    margin-bottom: 24px;
+    font-size: 1.02rem;
+    line-height: 1.55;
+  }
+
   .event-meta span,
   .hero-actions a {
     width: 100%;
@@ -920,9 +1017,44 @@ h1 span {
     width: calc(100% - 28px);
   }
 
+  .section {
+    padding: 66px 0;
+  }
+
+  .marquee {
+    padding-top: 18px;
+  }
+
+  .marquee-track span {
+    font-size: clamp(2.7rem, 15vw, 4.3rem);
+  }
+
   .section h2,
   .register-panel h2 {
-    font-size: clamp(2.45rem, 13vw, 3.6rem);
+    font-size: clamp(2.25rem, 12vw, 3.25rem);
+    line-height: 0.98;
+  }
+
+  .section-heading {
+    gap: 12px;
+    margin-bottom: 28px;
+  }
+
+  .benefit-tile {
+    min-height: 160px;
+    padding: 20px;
+  }
+
+  .benefit-tile h3 {
+    margin-top: 46px;
+  }
+
+  .register-panel {
+    padding: 28px 20px;
+  }
+
+  .seat-meter strong {
+    font-size: 4rem;
   }
 
   .corner-slash,
