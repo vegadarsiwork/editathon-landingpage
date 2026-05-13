@@ -17,7 +17,7 @@ import {
 gsap.registerPlugin(ScrollTrigger);
 
 const registrationUrl =
-  "https://docs.google.com/forms/d/e/1FAIpQLSf9e4TqlipEe-Wlx1zkbG07NQgT2-7zGbgROvsErtUpDw9LHw/viewform?usp=sf_link";
+  "https://forms.gle/CLp6RirASRdoxAMo6";
 const registrationPath = "/register";
 const mapsUrl = "https://maps.app.goo.gl/ufEYLRXZn9L4NhPp8";
 const mapsEmbedUrl =
